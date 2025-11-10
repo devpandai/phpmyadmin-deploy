@@ -14,6 +14,8 @@ spec:
       labels:
         app: phpmyadmin
     spec:
+      imagePullSecrets:
+      - name: ghcr-secret   # 🔑 referensi ke secret GHCR
       containers:
       - name: phpmyadmin
         image: ghcr.io/devpandai/phpmyadmin:latest
